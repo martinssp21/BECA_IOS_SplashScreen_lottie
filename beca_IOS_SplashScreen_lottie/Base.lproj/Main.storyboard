@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rPX-Bx-G0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="THS-ld-NLX">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="rPX-Bx-G0r" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dhb-bd-0Yo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6dX-Zo-0kX" kind="relationship" relationship="rootViewController" id="Hpb-xB-BFC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKJ-mT-Z8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="133"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="n5m-8a-c8n">
+            <objects>
+                <viewController id="6dX-Zo-0kX" customClass="SplashViewController" customModule="beca_IOS_SplashScreen_lottie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uGh-pk-WWT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAp-MD-Ek9">
+                                <rect key="frame" x="0.0" y="10" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vU8-Oh-auC" customClass="LOTAnimatedControl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vU8-Oh-auC" secondAttribute="trailing" id="Itg-68-oTQ"/>
+                            <constraint firstItem="vU8-Oh-auC" firstAttribute="top" secondItem="uGh-pk-WWT" secondAttribute="top" constant="20" id="a35-gq-TNL"/>
+                            <constraint firstItem="vU8-Oh-auC" firstAttribute="leading" secondItem="uGh-pk-WWT" secondAttribute="leading" id="s8G-MN-sJh"/>
+                            <constraint firstAttribute="bottom" secondItem="vU8-Oh-auC" secondAttribute="bottom" id="zds-oC-ZHp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vej-zS-ZfM"/>
+                    <connections>
+                        <outlet property="holderView" destination="fAp-MD-Ek9" id="P0Z-lE-t5B"/>
+                        <outlet property="splashAnimation" destination="vU8-Oh-auC" id="Yju-X9-3ix"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vw2-jc-evz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717.60000000000002" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
